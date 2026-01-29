@@ -18,12 +18,12 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
+
     display: block;
 }
 
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,30 +34,34 @@ header {
     z-index: 100;
 }
 
-.logo {
+.header__logo {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.logo img {
+.header__image {
     height: 80px;
 }
 
-nav ul {
+.header__title{
+    font-size: 1.5rem;
+}
+
+.nav__menu {
     list-style: none;
     display: flex;
     gap: 2rem;
 }
 
-nav a {
+.nav__link {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.nav__link:hover {
     color: #7c83ff;
 }
 
@@ -72,45 +76,45 @@ nav a:hover {
     background: linear-gradient(135deg, #111, #1a1a1a);
 }
 
-.home-texto {
+.home__content {
     width: 50%;
 }
 
-.home-texto h1 {
+.home__title {
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
-.home-texto p {
+.home__text {
     font-size: 1.2rem;
     color: #ccc;
 }
 
-.home img {
+.home__banner {
     width: 50%;
     max-width: 600px;
 }
 
 
-.sobre {
+.about {
     padding: 4rem 2.5rem;
     max-width: 900px;
     margin: auto;
     text-align: center;
 }
 
-.sobre h2 {
+.about__title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
-.sobre p {
+.about__text {
     font-size: 1.1rem;
     color: #ccc;
     margin-bottom: 2rem;
 }
 
-.valores {
+.about__values {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -118,24 +122,24 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.valores li {
+.about__item {
     background-color: #1c1c1c;
     padding: 1rem 1.5rem;
     border-radius: 6px;
 }
 
-.servicos {
+.services {
     padding: 4rem 2.5rem;
     background-color: #111;
     text-align: center;
 }
 
-.servicos h2 {
+.services__title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
-.servicos-container {
+.servicos__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -143,23 +147,23 @@ nav a:hover {
     margin: auto;
 }
 
-.servico {
+.services__card {
     background-color: #1c1c1c;
     padding: 2rem;
     border-radius: 8px;
     transition: transform 0.3s;
 }
 
-.servico:hover {
+.services__card:hover {
     transform: translateY(-6px);
 }
 
-.servico h3 {
+.services__card-title {
     margin: 1rem 0;
     font-size: 1.4rem;
 }
 
-.servico p {
+.services__card-text {
     color: #ccc;
 }
 
@@ -169,72 +173,72 @@ nav a:hover {
     text-align: center;
 }
 
-.depoimentos h2 {
+.depoimentos__title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
-.depoimentos-container {
+.depoimentos__list {
     display: flex;
     gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.depoimento {
+.depoimentos__card {
     background-color: #1c1c1c;
     padding: 2rem;
     border-radius: 8px;
     max-width: 300px;
 }
 
-.depoimento p {
+.depoimentos__text {
     font-style: italic;
     margin-bottom: 1rem;
     color: #ccc;
 }
 
-.depoimento span {
+.depoimentos__author {
     font-weight: bold;
 }
 
 
-.contato {
+.contact {
     padding: 4rem 2.5rem;
     background-color: #111;
 }
 
-.contato h2 {
+.contact__title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
-.contato-container {
+.contato__content {
     max-width: 600px;
     margin: auto;
 }
 
-.contato form {
+.form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contato input,
-.contato textarea {
+.form__input,
+.form__textarea {
     padding: 0.9rem;
     border-radius: 5px;
     border: none;
     font-size: 1rem;
 }
 
-.contato textarea {
+.form__textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-.contato button {
+.form__button {
     padding: 0.9rem;
     background-color: #7c83ff;
     border: none;
@@ -245,7 +249,7 @@ nav a:hover {
     transition: background 0.3s;
 }
 
-.contato button:hover {
+.form__button:hover {
     background-color: #5f66e0;
 }
 
@@ -258,13 +262,13 @@ footer {
 
 
 @media (min-width: 768px) {
-    .servicos-container {
+    .services__grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    header {
+    .header {
         flex-direction: column;
         gap: 1rem;
     }
@@ -274,8 +278,8 @@ footer {
         text-align: center;
     }
 
-    .home-texto,
-    .home img {
+    .home__content,
+    .home__banner {
         width: 100%;
     }
 }
